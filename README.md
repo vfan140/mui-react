@@ -24,17 +24,21 @@
 ```
 npm install gulp -g && npm install
 ```
-- 构建：
+- 构建
   ```
   npm run build
   ```
   
   （在dist目录下会生成对应的js和css）
   
-- 样例：
+- 样例
   ```
   npm run dev
   ```
   
   （访问localhost:3000/demo/index.html）
   
+## TODO
+
+- 重构其他组件
+- 组件DIY
