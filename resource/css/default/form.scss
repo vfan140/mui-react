@@ -1,0 +1,55 @@
+@import "input.scss";
+@import "radio.scss";
+@import "checkbox.scss";
+
+.muiField{
+	padding: 0.5rem 0rem;
+	min-width: 120px;
+	display: inline-block;
+}
+
+.muiFieldItem {
+    width: 100%;
+    vertical-align: middle;
+    display: inline-table;
+}
+
+.muiFieldItem > div {
+    display: table-cell;
+    word-break: break-all;
+    font-size: 1.4rem;
+    color: #000;
+}
+
+.muiFieldValue{
+}
+
+.muiFormInput {
+    padding: 0;
+    border: none;
+    text-align: left;
+    width: 100%;
+    font-size: 1.4rem;
+}
+
+.muiFieldItem > div.muiFieldOpt {
+    color: #3298E0;
+}
+
+.muiFieldOpt {
+    position: relative;
+    width: 1rem;
+    color: #3298E0;
+    text-align: right;
+}
+
+.muiFieldOpt i.mui-insert, .muiFieldOpt i.mui-org {
+    width: 20px;
+    height: 20px;
+    line-height: 1.2;
+    text-align: center;
+    font-size: 1.9rem;
+    border: 1px solid #3298E0;
+    border-radius: 50%;
+    color: #3298E0;
+}

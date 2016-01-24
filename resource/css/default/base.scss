@@ -1,0 +1,115 @@
+html {
+	font-size: 62.5%;/*10 ÷ 16 × 100% = 62.5%*/
+}
+body{
+	margin:0;
+	padding: 0;
+	overflow: hidden;
+}
+body,input,textarea,a,table,tr,td,th{
+	font-size: 1.6rem;/*1.6 × 10px = 16px */
+}
+body,input,textarea,div,a,table,tr,td,th{
+	font-family:Roboto,Tahoma,Arial,"Droid Sans","Helvetica Neue","Droid Sans Fallback","Heiti SC",sans-self;
+}
+body{
+	-webkit-touch-callout: none;
+	-webkit-text-size-adjust: none;
+	-webkit-user-select: none;
+	-webkit-highlight: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+a{
+	text-decoration: none;
+}
+a,a:link,a:active,a:hover,input{
+	outline: none;
+}
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+$black: #000;
+$white: #fff;
+$gray: #f0eff5;
+
+/*@常用背景色值*/
+.black{
+	background-color: $black;
+}
+.white{
+	background-color: $white;
+}
+.gray{
+	background-color: $gray;
+}
+
+@mixin textEllipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.textEllipsis {
+	display: block;
+	width: 99%;
+	@include textEllipsis;
+}
+
+/*系统全局字体颜色*/
+/*@标题颜色*/
+.muiSubject{
+	color: $black!important;
+}
+/*@作者颜色*/
+.muiAuthor {
+	color: #2c79c7!important;
+}
+
+/*在可视区域的宽度在 321px 和 431px 之间的时候被应用(小米2/三星  360px)*/
+@media screen and (min-width: 321px) and (max-width: 400px) {
+  	.muiSubject{
+		color: #0c0c0c!important;
+	}
+}
+
+/*在可视区域的宽度大于401px 的时候被应用(魅族mx3 432px)*/
+@media screen and (min-width: 401px) {
+  	.muiSubject{
+		color: #0c0c0c!important;
+	}
+}
+
+@-webkit-keyframes rotate {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -192px 0;
+    }
+}
+@keyframes rotate {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -192px 0;
+    }
+}
+@-webkit-keyframes rotate2 {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -444px 0;
+    }
+}
+@keyframes rotate2 {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -444px 0;
+    }
+}

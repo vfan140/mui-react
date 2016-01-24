@@ -1,0 +1,71 @@
+.muiFormRadio {
+	height: 1.5rem;
+	width: 1.5rem;
+	position: relative;
+	vertical-align: middle;
+	line-height: 1.5rem;
+	display: inline-block;
+}
+
+.muiFormRadio .muiFormRadioOverlay.mui-radio-checked{
+    color: #fa8733;
+}
+
+.muiField .muiFormOptionsField{
+    display: block;
+}
+
+.muiFieldOptions {
+    position: relative;
+}
+
+.muiFieldOptions .muiFormRadio {
+    position: absolute;
+    top: 1px;
+}
+
+.muiFormOptionsField:first-child .muiFieldOptions .muiFormRadio {
+    top: -8px;
+}
+
+.muiFormRadio .muiFormRadioOverlay {
+	color: #d8d8d8;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 7px;
+	left: 0;
+	font-size: 2.4rem;
+	line-height: 100%;
+	display: inline-block;
+}
+
+.muiFieldItem.view .muiFormRadioChecked .muiFormRadio .muiFormRadioOverlay,
+.muiFieldItem.readOnly .muiFormRadioChecked .muiFormRadio .muiFormRadioOverlay{
+    color: #898989;
+}
+
+.muiFormRadio input {
+	margin: 3px 0 0 1px;
+	opacity: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+}
+
+.muiFormOptionsField:first-child .muiFieldOptions > .muiFieldText {
+    padding-top: 2px;
+}
+
+.muiFormOptionsField:last-child .muiFieldOptions > .muiFieldText {
+    border-bottom: 0;
+    padding-bottom: 5px;
+}
+
+.muiFieldOptions > .muiFieldText {
+    margin-left: 2.2rem;
+    padding: 12px 0 12px 0.2rem;
+    font-size: 1.4rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #e2e2e2;
+}
