@@ -6,6 +6,9 @@ body{
 	padding: 0;
 	overflow: hidden;
 }
+html, body {
+    height: 100%;
+}
 body,input,textarea,a,table,tr,td,th{
 	font-size: 1.6rem;/*1.6 × 10px = 16px */
 }

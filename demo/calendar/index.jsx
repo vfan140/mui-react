@@ -1,4 +1,5 @@
 var React = require('react'),
+    Container = MUIReact.Container,
     TabBar = MUIReact.TabBar,
     TabBarButton = MUIReact.TabBarButton,
     TabBarButtonGroup = MUIReact.TabBarButtonGroup,
@@ -11,9 +12,16 @@ var CalendarIndex = React.createClass({
             height : 300
         };
         return (
-            <div>
+            <Container>
                 <Calendar></Calendar>
-            </div>
+                <TabBar>
+                    <TabBarButton align='left' iconClass='mui-back' onClick={this.handleBack}></TabBarButton>
+                    <TabBarButton iconClass='mui-create' ></TabBarButton>
+                    <TabBarButtonGroup align='right' iconClass='mui-more'>
+                        <TabBarButton iconClass='mui-home' text = '主页'></TabBarButton>
+                    </TabBarButtonGroup>
+                </TabBar>
+            </Container>
         );
     },
 
@@ -23,12 +31,6 @@ var CalendarIndex = React.createClass({
 
 
 });
-// <TabBar>
-//     <TabBarButton align='left' iconClass='mui-back' onClick={this.handleBack}></TabBarButton>
-//     <TabBarButton iconClass='mui-create' ></TabBarButton>
-//     <TabBarButtonGroup align='right' iconClass='mui-more'>
-//         <TabBarButton iconClass='mui-home' text = '主页'></TabBarButton>
-//     </TabBarButtonGroup>
-// </TabBar>
+
 
 module.exports = CalendarIndex;

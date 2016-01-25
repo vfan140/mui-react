@@ -129,6 +129,7 @@ var Calendar = React.createClass({
         var self = this;
         return {
             touchStartHandle : function(evt){
+                evt.preventDefault();
                 if(!self.props.canSwitch && self.touching === true)
                     return;
                 self.touching = true;

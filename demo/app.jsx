@@ -11,12 +11,12 @@ var React = require('react'),
 
 var App = React.createClass({
     render : function(){
+        var style = {
+            height : '100%',
+            width : '100%'
+        };
         return (
-            <div>
-                {
-                    React.cloneElement(this.props.children, null)
-                }
-            </div>
+            <div style = {style}>{React.cloneElement(this.props.children, null)}</div>
         );
     }
 });

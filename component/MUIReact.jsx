@@ -4,6 +4,9 @@ module.exports = {
 
     version : '1.0',
 
+    //layout:
+    Container : require('./layout/Container.jsx'),
+
     //dialog:
     DialogJS : require('./dialog/DialogJS.jsx'),
     Confirm : require('./dialog/Confirm.jsx'),
