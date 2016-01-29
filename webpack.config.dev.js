@@ -51,12 +51,12 @@ module.exports = {
                 loader: 'url-loader?mimetype=image/png'
             }, // url Loader
             {
-                test: /\.jsx?$/,
-                loaders: ['jsx?harmony']
-            }, //jsx Loader
+                test: /\.jsx$/,
+                loader: 'babel-loader?presets[]=react,presets[]=es2015'
+            }, //babel Loader
             {
                 test: /\.js$/,
-                loader: 'babel'
+                loader: 'babel-loader'
             }, //babel Loader
             {
                 test: /\.js$|\.jsx$/,

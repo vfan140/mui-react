@@ -9,7 +9,7 @@ var TabBarButton = React.createClass({
             buttonClass : 'mui-btn-default'
         };
     },
-
+    
     render : function(){
         var baseClass = ['muiButton',this.props.buttonClass].join(' '),
             iconClass = ['mui',this.props.iconClass].join(' ');

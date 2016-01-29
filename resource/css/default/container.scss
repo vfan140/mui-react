@@ -15,3 +15,20 @@
     -ms-flex-direction: column;
     flex-direction: column;
 }
+
+.muiContainer-transition-sfl-enter{
+    opacity: 0.01;
+    transition: opacity .5s ease-in;
+}
+
+.muiContainer-transition-sfl-enter.muiContainer-transition-sfl-enter-active{
+    opacity: 1;
+}
+
+.muiContainer-transition-sfl-leave{
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
+.muiContainer-transition-sfl-leave.muiContainer-transition-sfl-leave-active{
+    opacity: 0;
+}

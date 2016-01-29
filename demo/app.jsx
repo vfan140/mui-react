@@ -4,6 +4,7 @@ require('./mock/superagent-mock.js');
 var React = require('react'),
     ReactDOM = require('react-dom'),
     ReactRouter = require('react-router'),
+    Container = MUIReact.Container,
     Router = ReactRouter.Router,
     Route = ReactRouter.Route,
     IndexRoute = ReactRouter.IndexRoute,
@@ -11,12 +12,10 @@ var React = require('react'),
 
 var App = React.createClass({
     render : function(){
-        var style = {
-            height : '100%',
-            width : '100%'
-        };
         return (
-            <div style = {style}>{React.cloneElement(this.props.children, null)}</div>
+            <Container transition='sfl'>
+                {this.props.children}
+            </Container>
         );
     }
 });

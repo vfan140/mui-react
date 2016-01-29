@@ -43,8 +43,8 @@ module.exports = {
             }, //sass Loader
             {
                 test: /\.jsx?$/,
-                loaders: ['jsx?harmony']
-            }, //jsx Loader
+                loader: 'babel-loader?presets[]=react,presets[]=es2015'
+            }, //babel Loader
             {
                 test: /\.js$/,
                 loader: 'babel'
