@@ -1,13 +1,12 @@
 require('css/form.scss');
 
 var React = require('react'),
-    ReactWithAddons = require('react-addons');
+    classSet = require('react-classset');
 
 var Radio = React.createClass({
 
     render : function(){
-        var cx = ReactWithAddons.classSet,
-            overlayClass = cx({
+        var overlayClass = classSet({
                 'muiFormRadioOverlay' : true,
                 'mui' : true,
                 'mui-radio-checked' : this.props.groupValue == this.props.value || this.props.checked,

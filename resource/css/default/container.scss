@@ -16,19 +16,88 @@
     flex-direction: column;
 }
 
-.muiContainer-transition-sfl-enter{
-    opacity: 0.01;
-    transition: opacity .5s ease-in;
+.muiTransitionContainer > *{
+    position: absolute;
+    top : 0;
+    left: 0;
 }
 
-.muiContainer-transition-sfl-enter.muiContainer-transition-sfl-enter-active{
-    opacity: 1;
+@-webkit-keyframes animate-muiContainer-transition-sfl-enter{
+    from {
+        -webkit-transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%,0,0);
+    }
+    to{
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+}
+
+
+@-webkit-keyframes animate-muiContainer-transition-sfl-leave {
+    to {
+        opacity: .75;
+        -webkit-transform: translate3d(25%,0,0);
+        transform: translate3d(25%,0,0)
+    }
+}
+
+@-webkit-keyframes animate-muiContainer-transition-sfr-enter{
+    from {
+        -webkit-transform: translate3d(100%,0,0);
+        transform: translate3d(100%,0,0);
+    }
+    to{
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+    }
+}
+
+
+@-webkit-keyframes animate-muiContainer-transition-sfr-leave {
+    to {
+        opacity: .75;
+        -webkit-transform: translate3d(75%,0,0);
+        transform: translate3d(75%,0,0)
+    }
+}
+
+.muiContainer-transition-sfl-enter,.muiContainer-transition-sfr-enter{
+    pointer-events: none;
+    z-index : 20;
+}
+
+.muiContainer-transition-sfl-leave,.muiContainer-transition-sfr-leave{
+    pointer-events: none;
+    z-index : 10;
+}
+
+.muiContainer-transition-sfl-enter,.muiContainer-transition-sfl-leave,.muiContainer-transition-sfr-enter,.muiContainer-transition-sfr-leave{
+    -webkit-animation-duration:.5s;
+    animation-duration:.5s;
+    -webkit-animation-timing-function:ease;
+    animation-timing-function:ease;
+    -webkit-animation-fill-mode : forwards;
+    animation-fill-mode: forwards;
+}
+
+.muiContainer-transition-sfl-enter{
+    -webkit-animation-name:animate-muiContainer-transition-sfl-enter;
+    animation-name:animate-muiContainer-transition-sfl-enter;
 }
 
 .muiContainer-transition-sfl-leave{
-    opacity: 1;
-    transition: opacity .5s ease-in;
+     -webkit-animation-name:animate-muiContainer-transition-sfl-leave;
+    animation-name:animate-muiContainer-transition-sfl-leave;
 }
-.muiContainer-transition-sfl-leave.muiContainer-transition-sfl-leave-active{
-    opacity: 0;
+
+.muiContainer-transition-sfr-enter{
+    -webkit-animation-name:animate-muiContainer-transition-sfr-enter;
+    animation-name:animate-muiContainer-transition-sfr-enter;
 }
+
+.muiContainer-transition-sfr-leave{
+     -webkit-animation-name:animate-muiContainer-transition-sfr-leave;
+    animation-name:animate-muiContainer-transition-sfr-leave;
+}
+

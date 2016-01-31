@@ -1,5 +1,5 @@
 var React = require('react'),
-    classSet = require('react-addons').classSet,
+    classSet = require('react-classset'),
     TabBarButton = require('./TabBarButton.jsx'),
     assign = require('object-assign');
 

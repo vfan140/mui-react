@@ -1,6 +1,6 @@
 var React = require('react'),
     ReactDOM = require('react-dom'),
-    classSet = require('react-addons').classSet,
+    classSet = require('react-classset'),
     moment = require('moment');
 
 var CalendarMonth = React.createClass({

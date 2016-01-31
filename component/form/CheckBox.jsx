@@ -1,13 +1,12 @@
 require('css/form.scss');
 
 var React = require('react'),
-    ReactWithAddons = require('react-addons');
+    classSet = require('react-classset');
 
 var CheckBox = React.createClass({
 
     render : function(){
-        var cx = ReactWithAddons.classSet,
-            overlayClass = cx({
+        var overlayClass = classSet({
                 'muiFormCheckBoxOverlay':true,
                 'mui':true,
                 'mui-checked':this.props.checked

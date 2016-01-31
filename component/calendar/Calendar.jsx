@@ -38,7 +38,8 @@ var Calendar = React.createClass({
             mode : this.state.mode
         };
         var headerProps = assign({},commonProps, this.getHeaderHandle() ),
-            monthProps = weekProps = assign({},commonProps, this.getCalendarHandle() ) ,
+            monthProps = assign({},commonProps, this.getCalendarHandle() ) ,
+            weekProps = assign({},commonProps, this.getCalendarHandle() ),
             bottomProps = assign({},commonProps, this.getBottomHandle() );
 
         if(this.domHeight){
@@ -63,7 +64,7 @@ var Calendar = React.createClass({
     },
 
     componentDidMount : function(){
-        var header = ReactDOM.findDOMNode(this.refs['muiCalendarHeader'])
+        var header = ReactDOM.findDOMNode(this.refs['muiCalendarHeader']),
             month = ReactDOM.findDOMNode(this.refs['muiCalendarMonth']),
             week = ReactDOM.findDOMNode(this.refs['muiCalendarWeek']);
         this.domHeight = {

@@ -1,8 +1,8 @@
 require('css/container.scss');
 
 var React = require('react'),
-    CSSTransitionGroup = require('react-addons').CSSTransitionGroup,
-    classSet = require('react-addons').classSet;
+    CSSTransitionGroup = require('react-addons-css-transition-group'),
+    classSet = require('react-classset');
 
 var Container = React.createClass({
 
@@ -19,7 +19,8 @@ var Container = React.createClass({
             'muiContainer' : true,
             'muiContainerFill' : this.props.fill,
             'muiContainerColumn' : this.props.direction === 'column',
-            'muiContainerRow' : this.props.direction === 'row'
+            'muiContainerRow' : this.props.direction === 'row',
+            'muiTransitionContainer': this.props.transition 
         });
         if(this.props.transition){
             var transitionName = 'muiContainer-transition-' + this.props.transition;
@@ -27,7 +28,9 @@ var Container = React.createClass({
                 <CSSTransitionGroup
                     className = {classes}
                     transitionName = {transitionName}
-                    component={this.props.component}>
+                    component={this.props.component}
+                    transitionEnterTimeout={500}
+                    transitionLeaveTimeout={500}>
                     {this.props.children}
                 </CSSTransitionGroup>
             );

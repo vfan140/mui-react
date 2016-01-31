@@ -17,7 +17,7 @@ var Default = React.createClass({
     render : function(){
         var links = modules.map(function(_module){
             return (
-                <li>
+                <li key={_module.id}>
                     <Link to={_module.id}>
                         <span className = 'iconBox'>
                             <img src={moduleImg}></img>
