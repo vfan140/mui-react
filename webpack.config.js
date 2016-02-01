@@ -36,6 +36,13 @@ module.exports = {
             commonjs: 'react-dom',
             amd: 'react-dom'
         }
+    },{
+        './ReactDOM':{
+            root: 'ReactDOM',
+            commonjs2: 'react-dom',
+            commonjs: 'react-dom',
+            amd: 'react-dom'
+        }
     }],
     module: {
         loaders: [

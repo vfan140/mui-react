@@ -22,7 +22,8 @@ var Header = React.createClass({
     },
 
     renderChild : function(child){
-        var className = child.props.className || '';
+        var props = child.props || {},
+            className = props.className || '';
         className += ' muiHeaderItem';
         return React.cloneElement(child,{
             className : className

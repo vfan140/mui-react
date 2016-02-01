@@ -44,6 +44,11 @@ module.exports = {
     //calendar :
     Calendar : require('./calendar/Calendar.jsx'),
 
+    //list:
+    List : require('./list/List.jsx'),
+    CardItem : require('./list/item/CardItem.jsx'),
+    TextItem : require('./list/item/TextItem.jsx'),
+
     //utils
     utils : {
         adapter : require('./device/adapter.js')

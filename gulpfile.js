@@ -70,7 +70,7 @@ gulp.task('minify-css', function() {
 
 //发布构建
 gulp.task('build', function(cb) {
-    rq('clean', 'pack', [ 'minify-css'], cb);
+    rq('clean', 'pack', ['uglify','minify-css'], cb);
 });
 
 

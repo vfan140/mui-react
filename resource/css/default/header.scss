@@ -9,6 +9,7 @@
 	margin: 0 0 1px 0;
 	display: table; table-layout:fixed;
 	background-color: #f6f6f6;
+	z-index : 998;
 }
 .muiHeader .muiHeaderItem{
 	border-right: 1px solid rgba(209,209,209,0.1);
