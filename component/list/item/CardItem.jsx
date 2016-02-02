@@ -21,7 +21,7 @@ var CardItem = React.createClass({
 						</div>
 					</span>
 					<span className = 'muiCardItemFigureSubject'>
-						{ this.props.subject }
+						{ this.props.text }
 					</span>
 				</div>
 				{

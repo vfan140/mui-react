@@ -1,5 +1,5 @@
 //TODO 支持url传datas
-
+//TODO 支持无数据显示
 require('css/list.scss');
 
 var React = require('react'),
@@ -8,21 +8,30 @@ var React = require('react'),
 
 var List = React.createClass({
 
-	getDefaultProps() {
+	getDefaultProps: function(){
 	    return {
 	    	component : 'ul',	//列表顶层元素,默认使用ul
 	    	itemComponent :'li',	//列表子元素顶层元素,默认使用li
 	        item :  TextItem,	//列表子元素，默认选用TextItem
-	        datas : []	//数据来源,如果url中存在数据,会叠加
+	        defaultDatas : []	//数据来源,如果url中存在数据,会叠加
 	    };
+	},
+
+	getInitialState : function(){
+		return {
+			datas : this.props.defaultDatas
+		};
 	},
 
 	render : function(){
 		var self = this,
-			datas = this.props.datas,
+			datas = this.state.datas,
 			Component = this.props.component;
 		return (
-			<div className = 'muiListScrollable' ref = 'muiListScrollable'>
+			<div className = 'muiListScrollable' ref = 'muiListScrollable'
+					onTouchStart = {this.props.onTouchStart}
+					onTouchMove = {this.props.onTouchMove}
+					onTouchEnd = {this.props.onTouchEnd}>
 				<div className = 'muiListContainer'>
 					<div className = 'muiRefresh'>
 						{ this.renderRefresh() }

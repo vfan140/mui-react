@@ -1,3 +1,12 @@
+.muiNavSwapListContanier{
+    height:100%;
+}
+.muiSwapListContanier{
+    
+}
+.muiSwapListContanier.hidden{
+    display:none;
+}
 .muiListScrollable{
     height:100%;
 }
@@ -5,7 +14,6 @@
 	width : 100%;
 	background-color: #f0eff5;
     overflow-y : hidden;
-    padding-bottom: 5rem;
 }
 .muiListItem {
     padding: 1.3rem 0 .5rem;
@@ -65,3 +73,5 @@
     -webkit-box-orient: vertical;
     -webkit-box-pack: center;
 }
+
+

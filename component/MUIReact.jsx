@@ -36,16 +36,19 @@ module.exports = {
     TabBar : require('./tabbar/TabBar.jsx'),
     TabBarButton : require('./tabbar/TabBarButton.jsx'),
     TabBarButtonGroup : require('./tabbar/TabBarButtonGroup.jsx'),
-
+    BackButton : require('./tabbar/BackButton.jsx'),
 
     //button:
     Button : require('./button/Button.jsx'),
+    
 
     //calendar :
     Calendar : require('./calendar/Calendar.jsx'),
 
     //list:
     List : require('./list/List.jsx'),
+    SwapList : require('./list/SwapList.jsx'),
+    NavSwapList : require('./list/NavSwapList.jsx'),
     CardItem : require('./list/item/CardItem.jsx'),
     TextItem : require('./list/item/TextItem.jsx'),
 

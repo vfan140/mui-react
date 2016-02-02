@@ -11,20 +11,25 @@ var React = require('react'),
 var Default = React.createClass({
     
     render : function(){
-        var datas = [
-            {id:'review',subject : '流程管理', to:'review'},
-            {id:'calendar',subject : '我的日程', to:'calendar'},
-            {id:'notify',subject : '待办事宜', to:'notify'},
-            {id:'forum',subject : '论坛', to:'forum'}
-        ];
+        var datas = this.__data();
         return (
             <Container>
                 <Header>
-                    <div className = 'defaultHeader'>APP-MUIReact</div>
+                    <div className = 'defaultHeader'>Demo-MUIReact</div>
                 </Header>
-                <List datas = {datas} component = 'div' itemComponent = {Link} item = {CardItem}></List>
+                <List defaultDatas = {datas} component = 'div' itemComponent = {Link} item = {CardItem}></List>
             </Container>
         );
+    },
+
+    //静态数据
+    __data : function(){
+        return [
+            {id:'review',text : '流程管理', to:'review'},
+            {id:'calendar',text : '我的日程', to:'calendar'},
+            {id:'notify',text : '待办事宜', to:'notify'},
+            {id:'forum',text : '论坛', to:'forum'}
+        ];
     }
 });
 
