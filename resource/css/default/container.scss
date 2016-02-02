@@ -57,8 +57,8 @@
 @-webkit-keyframes animate-muiContainer-transition-sfr-leave {
     to {
         opacity: .75;
-        -webkit-transform: translate3d(75%,0,0);
-        transform: translate3d(75%,0,0)
+        -webkit-transform: translate3d(100%,0,0);
+        transform: translate3d(100%,0,0)
     }
 }
 
@@ -75,8 +75,8 @@
 .muiContainer-transition-sfl-enter,.muiContainer-transition-sfl-leave,.muiContainer-transition-sfr-enter,.muiContainer-transition-sfr-leave{
     -webkit-animation-duration:.5s;
     animation-duration:.5s;
-    -webkit-animation-timing-function:ease;
-    animation-timing-function:ease;
+    -webkit-animation-timing-function:cubic-bezier(.36,.66,.04,1);;
+    animation-timing-function:cubic-bezier(.36,.66,.04,1);;
     -webkit-animation-fill-mode : forwards;
     animation-fill-mode: forwards;
 }

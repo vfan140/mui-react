@@ -28,7 +28,12 @@ var Default = React.createClass({
             {id:'review',text : '流程管理', to:'review'},
             {id:'calendar',text : '我的日程', to:'calendar'},
             {id:'notify',text : '待办事宜', to:'notify'},
-            {id:'forum',text : '论坛', to:'forum'}
+            {id:'forum',text : '论坛', to:'forum'},
+            {id:'forum1',text : '论坛', to:'forum'},
+            {id:'forum2',text : '论坛', to:'forum'},
+            {id:'forum3',text : '论坛', to:'forum'},
+            {id:'forum4',text : '论坛', to:'forum'}
+
         ];
     }
 });

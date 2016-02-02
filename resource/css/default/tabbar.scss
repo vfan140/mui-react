@@ -1,14 +1,15 @@
 .muiTabBar{
     display: flex;
     line-height: 0.5em;
-    height: 3.5rem;
+    height: 5.5rem;
     color: #2c79c7;
     background-color: #f4f4f4;
-    box-shadow: 0 0 2px rgba(0,0,0,0.45);
+    box-shadow: 0 0 1px rgba(0,0,0,0.45);
     border-top: 1px solid #e8e8e8;
+    z-index: 998;
 }
 .muiTabBarButton{
-    padding: .5rem 1.5rem;
+    padding: 1.5rem 1.5rem;
 }
 .muiTabBarButtonIconArea{
     text-align: center;
