@@ -11,14 +11,14 @@ var entryBase = [
     ],
     entries = {};
 entries['mui-react'] = entryBase.concat('./component/MUIReact.jsx');
-entries['mui-demo'] = entryBase.concat('./demo/app.jsx');
+entries['mui-app'] = entryBase.concat('./app/index.jsx');
 
 module.exports = {
     entry: entries,
     output: {
-        path: path.resolve(__dirname, 'demo'), //打包文件存放的绝对路径
+        path: path.resolve(__dirname, 'app'), //打包文件存放的绝对路径
         filename: '[name]-bundle.js', //打包后的文件名
-        publicPath: '/demo', //网站运行时的访问bundle.js路径
+        publicPath: '/app', //网站运行时的访问bundle.js路径
         library: 'MUIReact', //全局命名空间
         libraryTarget: 'umd' //wrapper方式
     },

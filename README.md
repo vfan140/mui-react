@@ -9,7 +9,7 @@
 ├── package.json
 ├── dist                    # 构建目录
 ├── component               # 组件目录
-├── demo                    # demo目录
+├── app                    	# 应用（开发实验）目录
 ├── resource                # 资源目录（css、字体等）
 ├── gulp.js                 # gulp配置文件
 ├── webpack.config.dev.js   # webpack配置文件（开发用）
@@ -36,7 +36,7 @@ npm install gulp -g && npm install
   npm run dev
   ```
   
-  （访问localhost:3000/demo/index.html）
+  （访问localhost:3000/app/index.html）
   
 ## TODO
 
