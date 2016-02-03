@@ -16,9 +16,16 @@
 .muiSwapListContanier.hidden{
     display:none;
 }
+.muiSwapListContanier{
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+}
 .muiListContainer{
 	width : 100%;
 	background-color: #f0eff5;
+}
+.muiListContent{
+    padding: 1rem 0;
 }
 .muiListItem {
     padding: 1.3rem 0 .5rem;
@@ -39,6 +46,9 @@
     border: 1px solid #d0d0d0;
     line-height: 1.5rem;
     position: relative;
+}
+.muiCardItem:first-child{
+    margin-top: 0;
 }
 .muiCardItem .muiCardItemFigure{
 	position: relative;

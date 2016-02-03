@@ -52,6 +52,9 @@ module.exports = {
     CardItem : require('./list/item/CardItem.jsx'),
     TextItem : require('./list/item/TextItem.jsx'),
 
+    //loding:
+    Loading : require('./loading/Loading.jsx'),
+
     //utils
     utils : {
         adapter : require('./device/adapter.js')

@@ -68,6 +68,11 @@ gulp.task('minify-css', function() {
         output));
 });
 
+//TODO 资源拷贝
+gulp.task('resource',function(){
+    
+});
+
 //发布构建
 gulp.task('build', function(cb) {
     rq('clean', 'pack', ['uglify','minify-css'], cb);

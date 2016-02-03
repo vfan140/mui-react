@@ -2,5 +2,6 @@
 module.exports = {
     'default': require('./default/index.jsx'),
     'review': require('./review/index.jsx'),
-    'calendar': require('./calendar/index.jsx')
+    'calendar': require('./calendar/index.jsx'),
+    'todo' : require('./todo/index.jsx')
 };

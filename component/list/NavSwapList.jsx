@@ -63,8 +63,9 @@ var NavSwapList = React.createClass({
 			itemComponent : this.props.itemComponent,
 			item : this.props.item,
 			defaultDatas : data.list || [],
-			selected : index == this.state.itemIndex,
-			handleSwap : this.handleSwap
+			selected : index === this.state.itemIndex,
+			handleSwapEnd : this.handleSwapEnd,
+			index : index
 		};
 		var key = 'swapList' + index;
 		return (
@@ -72,7 +73,18 @@ var NavSwapList = React.createClass({
 		);
 	},
 
-	handleSwap : function(index){
+	handleSwapMove : function(index,nextIndex){
+
+	},
+
+	handleSwapEnd : function(index){
+		var length = this.state.datas.length;
+		if(index < 0){
+			index = 0;
+		}
+		if(index >= length){
+			index = length -1;
+		}
 		this.setState({
 			itemIndex : index
 		});
