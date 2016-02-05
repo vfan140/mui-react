@@ -13,19 +13,13 @@ var List = React.createClass({
 	    	component : 'ul',	//列表顶层元素,默认使用ul
 	    	itemComponent :'li',	//列表子元素顶层元素,默认使用li
 	        item :  TextItem,	//列表子元素，默认选用TextItem
-	        defaultDatas : []	//数据来源,如果url中存在数据,会叠加
+	        datas : []	//数据来源,如果url中存在数据,会叠加
 	    };
-	},
-
-	getInitialState : function(){
-		return {
-			datas : this.props.defaultDatas
-		};
 	},
 
 	render : function(){
 		var self = this,
-			datas = this.state.datas,
+			datas = this.props.datas,
 			Component = this.props.component;
 		return (
 			<div className = 'muiListScrollable' ref = 'muiListScrollable'

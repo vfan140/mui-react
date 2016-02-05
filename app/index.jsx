@@ -14,7 +14,7 @@ var App = React.createClass({
     render : function(){
         return (
             <Container transition='sfl'>
-                {React.cloneElement(this.props.children, {key: this.props.location.key})}
+                {   React.cloneElement(this.props.children, {key: this.props.location.key}) }
             </Container>
         );
     }

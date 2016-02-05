@@ -8,15 +8,17 @@ var NavBar = React.createClass({
 
     getDefaultProps : function(){
         return {
-            defaultdatas : [],
-            defaultItemIndex : 0
+            datas : [],
+
+            defaultItemIndex : 0,
+            itemIndex : 0
         };
     },
 
     getInitialState : function(){
+        var itemIndex = !isNaN(this.props.defaultItemIndex) ? this.props.defaultItemIndex : this.props.itemIndex;
         return {
-            datas : this.props.defaultdatas,
-            itemIndex : this.props.defaultItemIndex
+            itemIndex : itemIndex
         };
     },
 
@@ -35,7 +37,7 @@ var NavBar = React.createClass({
             <div className = 'muiNavbar'>
                 <ul className = 'muiNavbarContainer'>
                     {
-                        this.state.datas.map(function(data,index){
+                        this.props.datas.map(function(data,index){
                             return self.renderItem(data,index);
                         })
                     }
@@ -45,7 +47,7 @@ var NavBar = React.createClass({
     },
 
     componentDidMount : function(){
-        var datas = this.state.datas.slice(0),
+        var datas = this.props.datas.slice(0),
             self = this;
         if(this.props.url){
             request.post(this.props.url)

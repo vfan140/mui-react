@@ -11,15 +11,14 @@ var NavSwapList = React.createClass({
 	    	component : 'ul',	//列表顶层元素,默认使用ul
 	    	itemComponent :'li',	//列表子元素顶层元素,默认使用li
 	        item :  TextItem,	//列表子元素，默认选用TextItem
-	        defaultDatas : [],	//数据来源,如果url中存在数据,会叠加
-	        defaultItemIndex : 0
+	        datas : []	//数据来源,如果url中存在数据,会叠加
 	    };
 	},
 
 	getInitialState : function(){
 		return {
-			itemIndex : this.props.defaultItemIndex,
-			datas : this.props.defaultDatas
+			itemIndex : 0,	//当前选中
+			translateX : 0 //swapList滑动偏移百分比
 		};
 	},
 	
@@ -32,7 +31,7 @@ var NavSwapList = React.createClass({
 					this.renderNavBar()
 				}
 				{						
-					this.state.datas.map(function(data,index){
+					this.props.datas.map(function(data,index){
 						return self.renderSwapList(data,index);
 					})
 				}
@@ -42,7 +41,7 @@ var NavSwapList = React.createClass({
 
 	renderNavBar : function(){
 		var props = {
-			defaultdatas : this.state.datas,
+			datas : this.props.datas,
 			defaultItemIndex : this.state.itemIndex,
 			handleNavBar : this.handleNavBar
 		};
@@ -62,10 +61,11 @@ var NavSwapList = React.createClass({
 			component : this.props.component,
 			itemComponent : this.props.itemComponent,
 			item : this.props.item,
-			defaultDatas : data.list || [],
-			selected : index === this.state.itemIndex,
+			datas : data.list || [],
+			handleSwapMove : this.handleSwapMove,
 			handleSwapEnd : this.handleSwapEnd,
-			index : index
+			index : index,
+			translateX : (index - this.state.itemIndex) * 100 + this.state.translateX
 		};
 		var key = 'swapList' + index;
 		return (
@@ -73,12 +73,15 @@ var NavSwapList = React.createClass({
 		);
 	},
 
-	handleSwapMove : function(index,nextIndex){
-
+	handleSwapMove : function(index,translateX){
+		this.setState({
+			itemIndex : index,
+			translateX : translateX
+		});
 	},
 
 	handleSwapEnd : function(index){
-		var length = this.state.datas.length;
+		var length = this.props.datas.length;
 		if(index < 0){
 			index = 0;
 		}
@@ -86,7 +89,8 @@ var NavSwapList = React.createClass({
 			index = length -1;
 		}
 		this.setState({
-			itemIndex : index
+			itemIndex : index,
+			translateX : 0
 		});
 	}
 

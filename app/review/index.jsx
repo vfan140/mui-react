@@ -10,10 +10,10 @@ var React = require('react'),
 var ReviewIndex = React.createClass({
 
     render : function(){
-    	var defaultDatas = this.data();
+    	var datas = this.data();
         return (
         	<Container>
-               	<NavSwapList defaultDatas = {defaultDatas} item = {CardItem}></NavSwapList>
+               	<NavSwapList datas = {datas} item = {CardItem}></NavSwapList>
                 <TabBar>
                     <BackButton align='left' iconClass='mui-back'></BackButton>
                     <TabBarButton iconClass='mui-create' ></TabBarButton>

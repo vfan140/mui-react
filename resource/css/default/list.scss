@@ -13,6 +13,10 @@
     height : 100%;
     overflow: hidden;
 }
+.muiNavSwapListContanier > .muiSwapListContanier{
+    position: absolute;
+    width: 100%;
+}
 .muiSwapListContanier.hidden{
     display:none;
 }

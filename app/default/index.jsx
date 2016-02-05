@@ -17,7 +17,7 @@ var Default = React.createClass({
                 <Header>
                     <div className = 'defaultHeader'>Demo-MUIReact</div>
                 </Header>
-                <List defaultDatas = {datas} component = 'div' itemComponent = {Link} item = {CardItem}></List>
+                <List datas = {datas} component = 'div' itemComponent = {Link} item = {CardItem}></List>
             </Container>
         );
     },
