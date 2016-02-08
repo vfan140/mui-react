@@ -4,14 +4,20 @@ var React = require('react'),
     TabBarButton = MUIReact.TabBarButton,
     TabBarButtonGroup = MUIReact.TabBarButtonGroup,
     BackButton = MUIReact.BackButton,
-    Loading = MUIReact.Loading;
+    Button = MUIReact.Button,
+    PicSlideTrigger = MUIReact.PicSlideTrigger;
 
 var TodoIndex = React.createClass({
 
     render : function(){
+        var datas = this.data();
         return (
         	<Container>
-               	<Loading></Loading>
+                <Container>
+                    <PicSlideTrigger datas = {datas}>
+                        <Button title = '测试轮播组件'></Button>
+                    </PicSlideTrigger>
+                </Container>
                	<TabBar>
                     <BackButton align='left' iconClass='mui-back'></BackButton>
                     <TabBarButton iconClass='mui-create' ></TabBarButton>
@@ -21,6 +27,19 @@ var TodoIndex = React.createClass({
                 </TabBar>
             </Container>
         );
+    },
+
+    data : function(){
+        return [{
+            title : '归墟',
+            img : 'http://cyldurl.changyou.com/uploadfile/2014/1231/20141231085241927.jpg'
+        },{
+            title : '景安',
+            img : 'http://cyldurl.changyou.com/uploadfile/2015/0122/20150122083855718.jpg'
+        },{
+            title : '天晴之海',
+            img : 'http://cyldurl.changyou.com/uploadfile/2014/1231/20141231085318400.jpg'
+        }];
     }
 
 });

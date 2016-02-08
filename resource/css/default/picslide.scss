@@ -1,0 +1,64 @@
+.muiPicSlideContainer{
+	position: absolute;
+	top : 0;
+	left : 0;
+	height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.92);
+    z-index : 999;
+}
+.muiPicSlide{
+	width:100%;
+	height:100%;
+}
+.muiPicslideTitle{
+	padding: 0rem .8rem;
+    width: 60%;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: left;
+    color: #fff;
+    font-size: 1.8rem;
+    background-color: rgba(119,143,155,0.55);
+    position: absolute;
+    left: 0;
+    bottom: .8rem;
+    z-index: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: none;
+}
+.muiPicslidePaging {
+    position: absolute;
+    padding: 0 .8rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.6rem;
+    background-color: rgba(208,122,38,0.65);
+    left: 0;
+    bottom: 4.5rem;
+    z-index: 1;
+}
+.muiPicslideItemContanier {
+	display: table;
+	position : absolute;
+	width : 100%;
+    height: 100%;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    padding-top: 0px;
+}
+.muiPicslideItemContanier .muiPicslideItem{
+	display: table-cell;
+	vertical-align : middle;
+}
+.muiPicslideItem{
+	text-align:center;
+}
+.muiListPicItemImg {
+    margin: auto;
+    max-width : 100%;
+}

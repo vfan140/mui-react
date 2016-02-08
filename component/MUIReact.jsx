@@ -55,6 +55,9 @@ module.exports = {
     //loding:
     Loading : require('./loading/Loading.jsx'),
 
+    //picslide
+    PicSlideTrigger : require('./picslide/PicSlideTrigger.jsx'),
+
     //utils
     utils : {
         adapter : require('./device/adapter.js')

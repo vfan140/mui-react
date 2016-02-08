@@ -71,6 +71,8 @@ var SwapList = React.createClass({
 
 	handleOnTouchMove : function(evt){
 		evt.preventDefault();
+		if(!this.swaping)
+			return;
 		var touch = evt.touches[0];
         this.currentPosition = {
             x: touch.pageX,
@@ -90,6 +92,8 @@ var SwapList = React.createClass({
 
 	handleOnTouchEnd : function(evt){
 		evt.preventDefault();
+		if(!this.swaping)
+			return;
 		var dom = this.refs['swapList'],
 			width = dom.getBoundingClientRect()['width'];
 		if(this.props.handleSwapEnd && !isNaN(this.props.index)){
