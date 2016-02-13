@@ -21,7 +21,7 @@ var PicSlide = React.createClass({
 	render : function(){
 		var self = this;
 		return (
-			<div className = 'muiPicSlide' ref = 'muiPicSlide'>
+			<div className = 'muiPicSlide' ref = 'muiPicSlide' onClick = {this.props.onClick}>
 				<div className = 'muiPicslidePaging'>
 					<span className = 'muiPicslideCur'>
 						{ this.state.curNumber + 1 }
@@ -59,7 +59,6 @@ var PicSlide = React.createClass({
 	},
 
 	handleOnTouchStart : function(evt){
-		evt.preventDefault();
 		if(this.swaping)
 			return;
 		this.swaping = true;
@@ -71,7 +70,6 @@ var PicSlide = React.createClass({
 	},
 
 	handleOnTouchMove : function(evt){
-		evt.preventDefault();
 		if(!this.swaping)
 			return;
 		var touch = evt.touches[0];
@@ -88,9 +86,12 @@ var PicSlide = React.createClass({
 	},
 
 	handleOnTouchEnd : function(evt){
-		evt.preventDefault();
 		if(!this.swaping)
 			return;
+		if(!this.currentPosition){
+			this.swaping = false;
+			return ;
+		}
 		var dom = this.refs['muiPicSlide'],
 			width = dom.getBoundingClientRect()['width'],
 			dx = this.currentPosition.x - this.startPosition.x,

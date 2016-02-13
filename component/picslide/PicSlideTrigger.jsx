@@ -23,14 +23,19 @@ var PicSlideTrigger = React.createClass({
 	handleTriggerClick : function(){
 		if(!this._wrapper){
 			this.renderWrapper();
+			ReactDOM.render(<PicSlide datas = {this.props.datas} onClick = {this.handleClose}></PicSlide>,this._wrapper);
 		}
-		ReactDOM.render(<PicSlide datas = {this.props.datas}></PicSlide>,this._wrapper);
+		this._wrapper.className = 'muiPicSlideContainer visible';
 	},
 
 	renderWrapper : function(){
 		this._wrapper = document.createElement('div');
 		this._wrapper.className = 'muiPicSlideContainer';
 		this.getContainerDOMNode().appendChild(this._wrapper);
+	},
+
+	handleClose : function(){
+		this._wrapper.className = 'muiPicSlideContainer hidden';
 	},
 
 	getContainerDOMNode : function(){
